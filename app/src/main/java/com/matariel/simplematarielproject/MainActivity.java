@@ -12,6 +12,7 @@ import com.listandgrid.multil_type_support.MultiItemCommonAdapter;
 import com.listandgrid.multil_type_support.MultiItemTypeSupport;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
+import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ public class MainActivity extends BaseActivity {
         List<BaseBean> mDatas = new ArrayList<>();
         BBaseBean bBaseBean1 = new BBaseBean();
         bBaseBean1.setFlag(1);
-        bBaseBean1.setName("111");
+        bBaseBean1.setName("滑动删除的recycleview");
         mDatas.add(bBaseBean1);
 
         BBaseBean bBaseBean2 = new BBaseBean();
@@ -93,7 +94,7 @@ public class MainActivity extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 if(bbaseBean.getFlag() == 1){
-
+                                    startActivity(SwipeDismissRecyclerActivity.class);
                                 }
                             }
                         });
