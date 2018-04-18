@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 
 import com.example.flabbyview.FlabbyListView;
@@ -22,13 +23,19 @@ public class FlabbyActivity extends BaseActivity {
     private ListAdapter adapter;
 
     @Override
+    protected View getTitleView() {
+        return View.inflate(this, R.layout.layout_title_base, null);
+    }
+
+    @Override
     protected View getRootView() {
         return View.inflate(this, R.layout.activity_flabby, null);
     }
 
     @Override
     protected void initToolBar() {
-        setToolbarTitle("FlabbyView");
+        TextView tv_title = getView(R.id.tv_title);
+        tv_title.setText("FlabbyView");
     }
 
     @Override

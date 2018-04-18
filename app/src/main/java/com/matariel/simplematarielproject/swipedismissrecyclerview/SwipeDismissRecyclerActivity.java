@@ -31,13 +31,19 @@ public class SwipeDismissRecyclerActivity extends BaseActivity {
     }
 
     @Override
+    protected View getTitleView() {
+        return View.inflate(this, R.layout.layout_title_base, null);
+    }
+
+    @Override
     protected View getRootView() {
         return View.inflate(this, R.layout.activity_swipedismissrecycleview, null);
     }
 
     @Override
     protected void initToolBar() {
-        setToolbarTitle("滑动删除recycleview的item");
+        TextView tv_title = getView(R.id.tv_title);
+        tv_title.setText("滑动删除recycleview的item");
     }
 
     @Override

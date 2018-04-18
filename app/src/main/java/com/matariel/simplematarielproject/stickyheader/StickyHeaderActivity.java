@@ -32,13 +32,17 @@ public class StickyHeaderActivity extends BaseActivity implements OnHeaderClickL
     private PersonAdapter personAdapter;
 
     @Override
+    protected View getTitleView() {
+        return null;
+    }
+
+    @Override
     protected View getRootView() {
         return View.inflate(this, R.layout.activity_stickyheader, null);
     }
 
     @Override
     protected void initToolBar() {
-        setCustomTitleVisibility(View.GONE);
         inflateMenu(R.menu.meun_sticky_header, new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {

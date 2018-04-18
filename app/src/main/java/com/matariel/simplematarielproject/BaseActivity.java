@@ -21,8 +21,7 @@ import android.widget.ViewFlipper;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Toolbar toolbar;
-    private ViewFlipper mContentView;
-    private TextView toolbarTitle;
+    private ViewFlipper mContentView, mTitleRoot;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,12 +29,16 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         //初始化布局
         setContentView(R.layout.layout_base);
         mContentView = getView(R.id.layout_container);
+        mTitleRoot = getView(R.id.title_root);
         toolbar = getView(R.id.base_tool_bar);
-        toolbarTitle = getView(R.id.tv_title);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
-        mContentView.addView(getRootView(), lp);
 
+        View titleView = getTitleView();
+        if(titleView != null){
+            mTitleRoot.addView(titleView, lp);
+        }
+        mContentView.addView(getRootView(), lp);
         //初始化基类数据
         initBaseData();
         //初始化Toolbar
@@ -52,6 +55,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     private void initBaseData(){}{
 
     }
+    protected abstract View getTitleView();
     /**初始化布局*/
     protected abstract View getRootView();
     /**初始化Toolbar*/
@@ -72,26 +76,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         return (T) findViewById(resourcesId);
     }
 
-    protected void setToolbarTitle(String title){
-        toolbarTitle.setVisibility(View.VISIBLE);
-        toolbarTitle.setText(title);
-    }
-
     /**
      * toolbar设置menu资源
      * @param resId
      */
     protected void inflateMenu(@MenuRes int resId, Toolbar.OnMenuItemClickListener listener){
+        mTitleRoot.setVisibility(View.GONE);
         toolbar.inflateMenu(resId);
         toolbar.setOnMenuItemClickListener(listener);
-    }
-
-    /**
-     * 是否使用自定义Title
-     * @param show
-     */
-    protected void setCustomTitleVisibility(int show){
-        getView(R.id.layout_head).setVisibility(show);
     }
 
     /**
