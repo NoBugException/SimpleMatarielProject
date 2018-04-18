@@ -31,4 +31,6 @@ dependencies {
     compile 'com.multi.support:recyclerview:1.0'
     //滑动删除recyvieview的item
     compile 'com.swipe.dismiss:recyclerview:1.0'
+    //listview之FlabbyView
+    compile 'com.flabby:listview:1.0'
 }

@@ -10,6 +10,7 @@ import com.listandgrid.multil_type_support.BaseBean;
 import com.listandgrid.multil_type_support.CommonViewHolder;
 import com.listandgrid.multil_type_support.MultiItemCommonAdapter;
 import com.listandgrid.multil_type_support.MultiItemTypeSupport;
+import com.matariel.simplematarielproject.flabbyview.FlabbyActivity;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
@@ -49,7 +50,7 @@ public class MainActivity extends BaseActivity {
 
         BBaseBean bBaseBean2 = new BBaseBean();
         bBaseBean2.setFlag(2);
-        bBaseBean2.setName("222");
+        bBaseBean2.setName("FlabbyView");
         mDatas.add(bBaseBean2);
 
         BBaseBean bBaseBean3 = new BBaseBean();
@@ -95,6 +96,8 @@ public class MainActivity extends BaseActivity {
                             public void onClick(View view) {
                                 if(bbaseBean.getFlag() == 1){
                                     startActivity(SwipeDismissRecyclerActivity.class);
+                                }else if(bbaseBean.getFlag() == 2){
+                                    startActivity(FlabbyActivity.class);
                                 }
                             }
                         });

@@ -11,9 +11,9 @@
         android:orientation="horizontal">
         <TextView
             style="@style/left_item"
-            android:text="@string/materialname"/>
+            android:text="@string/materialtype"/>
         <TextView
-            android:id="@+id/id_item_materialname"
+            android:id="@+id/id_item_materialtype"
             style="@style/right_item"/>
     </LinearLayout>
 
@@ -23,9 +23,9 @@
         android:orientation="horizontal">
         <TextView
             style="@style/left_item"
-            android:text="@string/materialtype"/>
+            android:text="@string/materialname"/>
         <TextView
-            android:id="@+id/id_item_materialtype"
+            android:id="@+id/id_item_materialname"
             style="@style/right_item"/>
     </LinearLayout>
 

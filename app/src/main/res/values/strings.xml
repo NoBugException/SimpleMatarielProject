@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SimpleMatarielProject</string>
 
-    <string name="materialname">名称</string>
-    <string name="materialtype">类型</string>
+    <string name="materialname">描述</string>
+    <string name="materialtype">Item类型</string>
 
 </resources>
