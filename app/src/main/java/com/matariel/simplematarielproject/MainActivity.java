@@ -13,6 +13,7 @@ import com.listandgrid.multil_type_support.MultiItemTypeSupport;
 import com.matariel.simplematarielproject.flabbyview.FlabbyActivity;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
+import com.matariel.simplematarielproject.nice_spinner.NiceSpinnerActivity;
 import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
 
@@ -59,6 +60,11 @@ public class MainActivity extends BaseActivity {
         bBaseBean3.setName("带头部的recycleview");
         mDatas.add(bBaseBean3);
 
+        BBaseBean bBaseBean4 = new BBaseBean();
+        bBaseBean4.setFlag(4);
+        bBaseBean4.setName("NiceSpinner");
+        mDatas.add(bBaseBean4);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -101,6 +107,8 @@ public class MainActivity extends BaseActivity {
                                     startActivity(FlabbyActivity.class);
                                 }else if(bbaseBean.getFlag() == 3){
                                     startActivity(StickyHeaderActivity.class);
+                                }else if(bbaseBean.getFlag() == 4){
+                                    startActivity(NiceSpinnerActivity.class);
                                 }
                             }
                         });

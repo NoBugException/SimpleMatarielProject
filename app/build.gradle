@@ -35,4 +35,6 @@ dependencies {
     compile 'com.flabby:listview:1.0'
     //带有头部的recycleview
     compile 'com.sticky.headers:recyclerview:1.0'
+    //niceprinner
+    compile 'com.nice:spinner:1.0'
 }
