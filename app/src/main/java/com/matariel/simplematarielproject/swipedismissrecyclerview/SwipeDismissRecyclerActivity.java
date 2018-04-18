@@ -11,13 +11,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.swipe_dismiss_recyclerview.SwipeDismissRecyclerViewTouchListener;
+import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
 
 import java.util.LinkedList;
 import java.util.List;
 
 
-public class SwipeDismissRecyclerActivity extends ActionBarActivity {
+public class SwipeDismissRecyclerActivity extends BaseActivity {
 
     private void showDialog(String msg){
         AlertDialog alert = new AlertDialog.Builder(SwipeDismissRecyclerActivity.this)
@@ -30,10 +31,17 @@ public class SwipeDismissRecyclerActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipedismissrecycleview);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_swipedismissrecycleview, null);
+    }
 
+    @Override
+    protected void initToolBar() {
+        setToolbarTitle("滑动删除recycleview的item");
+    }
+
+    @Override
+    protected void initView() {
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         final RecyclerView anotherRecyclerView = (RecyclerView) findViewById(R.id.recyclerHorizontalView);
 
@@ -106,9 +114,18 @@ public class SwipeDismissRecyclerActivity extends ActionBarActivity {
                 }).setIsVertical(true).create();
 
         anotherRecyclerView.setOnTouchListener(verticalListener);
+    }
 
+    @Override
+    protected void initData() {
 
     }
+
+    @Override
+    protected void initListener() {
+
+    }
+
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
         public List<String> mDataset;
