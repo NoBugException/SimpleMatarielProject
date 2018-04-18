@@ -13,6 +13,7 @@ import com.listandgrid.multil_type_support.MultiItemTypeSupport;
 import com.matariel.simplematarielproject.flabbyview.FlabbyActivity;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
+import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
 
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class MainActivity extends BaseActivity {
 
         BBaseBean bBaseBean3 = new BBaseBean();
         bBaseBean3.setFlag(3);
-        bBaseBean3.setName("333");
+        bBaseBean3.setName("带头部的recycleview");
         mDatas.add(bBaseBean3);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
@@ -98,6 +99,8 @@ public class MainActivity extends BaseActivity {
                                     startActivity(SwipeDismissRecyclerActivity.class);
                                 }else if(bbaseBean.getFlag() == 2){
                                     startActivity(FlabbyActivity.class);
+                                }else if(bbaseBean.getFlag() == 3){
+                                    startActivity(StickyHeaderActivity.class);
                                 }
                             }
                         });

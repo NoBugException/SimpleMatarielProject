@@ -3,6 +3,7 @@ package com.matariel.simplematarielproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.MenuRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -31,9 +32,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         mContentView = getView(R.id.layout_container);
         toolbar = getView(R.id.base_tool_bar);
         toolbarTitle = getView(R.id.tv_title);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setHomeButtonEnabled(false);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
         mContentView.addView(getRootView(), lp);
@@ -78,6 +76,24 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         toolbarTitle.setVisibility(View.VISIBLE);
         toolbarTitle.setText(title);
     }
+
+    /**
+     * toolbar设置menu资源
+     * @param resId
+     */
+    protected void inflateMenu(@MenuRes int resId, Toolbar.OnMenuItemClickListener listener){
+        toolbar.inflateMenu(resId);
+        toolbar.setOnMenuItemClickListener(listener);
+    }
+
+    /**
+     * 是否使用自定义Title
+     * @param show
+     */
+    protected void setCustomTitleVisibility(int show){
+        getView(R.id.layout_head).setVisibility(show);
+    }
+
     /**
      * 启动Activity
      * @param clazz
