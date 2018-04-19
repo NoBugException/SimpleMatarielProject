@@ -1,13 +1,9 @@
 package com.matariel.simplematarielproject.flabbyview;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-
-import com.example.flabbyview.FlabbyListView;
+import com.flabbyview.listview.FlabbyListView;
 import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
 
