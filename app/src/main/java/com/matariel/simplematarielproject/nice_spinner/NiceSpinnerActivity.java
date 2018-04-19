@@ -3,9 +3,9 @@ package com.matariel.simplematarielproject.nice_spinner;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.nicespinner.NiceSpinner;
 import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
+import com.nice.spinner.NiceSpinner;
 
 import java.util.Arrays;
 import java.util.LinkedList;
