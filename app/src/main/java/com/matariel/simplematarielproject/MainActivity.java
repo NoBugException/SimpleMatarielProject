@@ -6,10 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.listandgrid.multil_type_support.BaseBean;
-import com.listandgrid.multil_type_support.CommonViewHolder;
-import com.listandgrid.multil_type_support.MultiItemCommonAdapter;
-import com.listandgrid.multil_type_support.MultiItemTypeSupport;
 import com.matariel.simplematarielproject.flabbyview.FlabbyActivity;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
@@ -17,6 +13,10 @@ import com.matariel.simplematarielproject.nice_spinner.NiceSpinnerActivity;
 import com.matariel.simplematarielproject.parallax.ParallaxActivity;
 import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
+import com.multilsupport.recycleview.BaseBean;
+import com.multilsupport.recycleview.CommonViewHolder;
+import com.multilsupport.recycleview.MultiItemCommonAdapter;
+import com.multilsupport.recycleview.MultiItemTypeSupport;
 
 import java.util.ArrayList;
 import java.util.List;
