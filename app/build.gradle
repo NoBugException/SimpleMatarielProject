@@ -30,7 +30,7 @@ dependencies {
     //支持多类型的recycleview
     compile 'com.multi.support:recyclerview:1.1'
     //滑动删除recyvieview的item
-    compile 'com.swipe.dismiss:recyclerview:1.0'
+    compile 'com.swipe.dismiss:recyclerview:1.1'
     //listview之FlabbyView
     compile 'com.flabby:listview:1.1'
     //带有头部的recycleview

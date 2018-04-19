@@ -1,8 +1,6 @@
 package com.matariel.simplematarielproject.swipedismissrecyclerview;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.swipe_dismiss_recyclerview.SwipeDismissRecyclerViewTouchListener;
 import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
+import com.swipedismiss.recyclerview.SwipeDismissRecyclerViewTouchListener;
 
 import java.util.LinkedList;
 import java.util.List;
