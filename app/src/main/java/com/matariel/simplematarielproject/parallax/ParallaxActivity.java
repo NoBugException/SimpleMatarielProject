@@ -1,16 +1,14 @@
 package com.matariel.simplematarielproject.parallax;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.list.parallax.ParallaxScollListView;
 import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
+import com.parallax.list.ParallaxScollListView;
 
 public class ParallaxActivity extends BaseActivity {
 
