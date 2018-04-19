@@ -14,6 +14,7 @@ import com.matariel.simplematarielproject.flabbyview.FlabbyActivity;
 import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
 import com.matariel.simplematarielproject.nice_spinner.NiceSpinnerActivity;
+import com.matariel.simplematarielproject.parallax.ParallaxActivity;
 import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
 
@@ -71,6 +72,11 @@ public class MainActivity extends BaseActivity {
         bBaseBean4.setName("NiceSpinner");
         mDatas.add(bBaseBean4);
 
+        BBaseBean bBaseBean5 = new BBaseBean();
+        bBaseBean5.setFlag(5);
+        bBaseBean5.setName("ParallaxScollListView");
+        mDatas.add(bBaseBean5);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -115,7 +121,10 @@ public class MainActivity extends BaseActivity {
                                     startActivity(StickyHeaderActivity.class);
                                 }else if(bbaseBean.getFlag() == 4){
                                     startActivity(NiceSpinnerActivity.class);
+                                }else if(bbaseBean.getFlag() == 5){
+                                    startActivity(ParallaxActivity.class);
                                 }
+
                             }
                         });
                         break;

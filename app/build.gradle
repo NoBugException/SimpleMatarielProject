@@ -37,4 +37,6 @@ dependencies {
     compile 'com.sticky.headers:recyclerview:1.0'
     //niceprinner
     compile 'com.nice:spinner:1.0'
+    //ParallaxScollListView
+    compile 'com.parallax:listview:1.0'
 }
