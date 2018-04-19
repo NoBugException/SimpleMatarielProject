@@ -34,7 +34,7 @@ dependencies {
     //listview之FlabbyView
     compile 'com.flabby:listview:1.1'
     //带有头部的recycleview
-    compile 'com.sticky.headers:recyclerview:1.0'
+    compile 'com.sticky.headers:recyclerview:1.1'
     //niceprinner
     compile 'com.nice:spinner:1.1'
     //ParallaxScollListView

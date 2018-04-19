@@ -8,16 +8,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.stickyheaders.DrawOrder;
-import com.example.stickyheaders.OnHeaderClickListener;
-import com.example.stickyheaders.StickyHeadersBuilder;
-import com.example.stickyheaders.StickyHeadersItemDecoration;
 import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
 import com.matariel.simplematarielproject.stickyheader.adapters.BigramHeaderAdapter;
 import com.matariel.simplematarielproject.stickyheader.adapters.InitialHeaderAdapter;
 import com.matariel.simplematarielproject.stickyheader.adapters.PersonAdapter;
 import com.matariel.simplematarielproject.stickyheader.data.PersonDataProvider;
+import com.stickyheaders.recycleview.DrawOrder;
+import com.stickyheaders.recycleview.OnHeaderClickListener;
+import com.stickyheaders.recycleview.StickyHeadersBuilder;
+import com.stickyheaders.recycleview.StickyHeadersItemDecoration;
 
 /**
  * Created by beixinyuan_android on 2018/4/18.
