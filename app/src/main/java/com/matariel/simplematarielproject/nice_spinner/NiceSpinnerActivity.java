@@ -1,10 +1,10 @@
 package com.matariel.simplematarielproject.nice_spinner;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.nicespinner.NiceSpinner;
+import com.matariel.simplematarielproject.BaseActivity;
 import com.matariel.simplematarielproject.R;
 
 import java.util.Arrays;
@@ -15,14 +15,38 @@ import java.util.List;
  * Created by beixinyuan_android on 2018/4/18.
  */
 
-public class NiceSpinnerActivity extends AppCompatActivity {
+public class NiceSpinnerActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nicespinner);
+    protected View getTitleView() {
+        return View.inflate(this, R.layout.layout_title_base, null);
+    }
+
+    @Override
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_nicespinner, null);
+    }
+
+    @Override
+    protected void initToolBar() {
+        TextView tv_title = getView(R.id.tv_title);
+        tv_title.setText("NiceSpinner");
+    }
+
+    @Override
+    protected void initView() {
         NiceSpinner niceSpinner = (NiceSpinner) findViewById(R.id.nice_spinner);
         List<String> dataset = new LinkedList<>(Arrays.asList("One", "Two", "Three", "Four", "Five"));
         niceSpinner.attachDataSource(dataset);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 }
