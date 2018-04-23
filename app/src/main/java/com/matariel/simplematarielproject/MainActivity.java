@@ -11,6 +11,7 @@ import com.matariel.simplematarielproject.multirecycleview.BBaseBean;
 import com.matariel.simplematarielproject.multirecycleview.MaterialItemViewType;
 import com.matariel.simplematarielproject.nice_spinner.NiceSpinnerActivity;
 import com.matariel.simplematarielproject.parallax.ParallaxActivity;
+import com.matariel.simplematarielproject.pulltozoom.PullToZoomActivity;
 import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
 import com.multilsupport.recycleview.BaseBean;
@@ -77,6 +78,11 @@ public class MainActivity extends BaseActivity {
         bBaseBean5.setName("ParallaxScollListView");
         mDatas.add(bBaseBean5);
 
+        BBaseBean bBaseBean6 = new BBaseBean();
+        bBaseBean6.setFlag(6);
+        bBaseBean6.setName("PullToZoomVIew");
+        mDatas.add(bBaseBean6);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -123,6 +129,8 @@ public class MainActivity extends BaseActivity {
                                     startActivity(NiceSpinnerActivity.class);
                                 }else if(bbaseBean.getFlag() == 5){
                                     startActivity(ParallaxActivity.class);
+                                }else if(bbaseBean.getFlag() == 6){
+                                    startActivity(PullToZoomActivity.class);
                                 }
 
                             }

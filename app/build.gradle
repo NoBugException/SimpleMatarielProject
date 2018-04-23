@@ -39,4 +39,6 @@ dependencies {
     compile 'com.nice:spinner:1.1'
     //ParallaxScollListView
     compile 'com.parallax:listview:1.1'
+    //PullToZoom
+    compile 'com.pulltozoom:listviewandscrollview:1.1'
 }
