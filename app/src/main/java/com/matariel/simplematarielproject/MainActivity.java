@@ -14,6 +14,8 @@ import com.matariel.simplematarielproject.parallax.ParallaxActivity;
 import com.matariel.simplematarielproject.pulltozoom.PullToZoomActivity;
 import com.matariel.simplematarielproject.stickyheader.StickyHeaderActivity;
 import com.matariel.simplematarielproject.swipedismissrecyclerview.SwipeDismissRecyclerActivity;
+import com.matariel.simplematarielproject.swipemenu.SimpleActivity;
+import com.matariel.simplematarielproject.swipemenu.SwipemenuActivity;
 import com.multilsupport.recycleview.BaseBean;
 import com.multilsupport.recycleview.CommonViewHolder;
 import com.multilsupport.recycleview.MultiItemCommonAdapter;
@@ -83,6 +85,12 @@ public class MainActivity extends BaseActivity {
         bBaseBean6.setName("PullToZoomVIew");
         mDatas.add(bBaseBean6);
 
+        BBaseBean bBaseBean7 = new BBaseBean();
+        bBaseBean7.setFlag(7);
+        bBaseBean7.setName("listview左右滑动弹出meun");
+        mDatas.add(bBaseBean7);
+
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -131,6 +139,8 @@ public class MainActivity extends BaseActivity {
                                     startActivity(ParallaxActivity.class);
                                 }else if(bbaseBean.getFlag() == 6){
                                     startActivity(PullToZoomActivity.class);
+                                }else if(bbaseBean.getFlag() == 7){
+                                    startActivity(SwipemenuActivity.class);
                                 }
 
                             }
